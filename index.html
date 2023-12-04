@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main/output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body>
+    <!-- main container -->
+    <main
+      class="w-full min-h-screen flex text-charcoal-grey bg-charcoal-grey md:justify-center md:items-center"
+    >
+      <section
+        id="Sign-up"
+        class="w-full flex flex-col items-center bg-white md:w-[900px] md:h-auto md:p-3 md:grid  md:grid-cols-2 gap-2 md:justify-center md:items-center md:rounded-2xl md:shadow-xl md:shadow-darkslate-grey"
+      >
+        <div
+          aria-hidden="true"
+          class="h-64 w-full bg-hero-mobile bg-cover bg-bottom bg-no-repeat md:h-full md:w-[95%] md:order-2 md:bg-hero-desktop md:bg-cover md:bg-center xl:bg-right"
+        ></div>
+        <div class="w-full py-4 px-4 space-y-5 md:p-5">
+          <h1 class="text-4xl font-bold md:text-5xl">Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul class=" space-y-2 ">
+            <li class="bg-icon-list bg-no-repeat ps-8">
+              Product discovery and building what matters
+            </li>
+            <li class="bg-icon-list bg-no-repeat ps-8">
+              Measuring to ensure updates are a success
+            </li>
+            <li class="bg-icon-list bg-no-repeat ps-8">And much more!</li>
+          </ul>
+          <form name="subscribeForm" novalidate class="space-y-4">
+            <div class="grid grid-cols-2 grid-rows-2">
+              <label for="">Email address</label>
+              <input
+                type="text"
+                name="email"
+                type="email"
+                placeholder="email@company.com"
+                class="w-full col-span-10 order-3 border border-grey rounded-lg transition outline-none px-5 py-3 disabled:cursor-not-allowed disabled:text-grey enabled:hover:border-darkslate-grey enabled:hover:invalid:border-tomato invalid:bg-tomato/20 invalid:text-tomato invalid:border-tomato focus:border-darkslate-grey peer"
+              />
+              <span
+                class="mt-6 mb-2 font-bold text-xs text-end text-tomato invisible peer-invalid:visible"
+              >
+                Valid email required
+              </span>
+            </div>
+            <button
+              disabled
+              class="w-full flex flex-row justify-around rounded-lg items-center bg-slate-900 px-4 py-3 font-bold text-white disabled:bg-darkslate-grey/80 disabled:cursor-not-allowed enabled:hover:bg-gradient-to-r enabled:hover:from-pink enabled:hover:to-orange enabled:hover:shadow-lg enabled:hover:shadow-tomato/50 enabled:focus:outline enabled:focus:outline-offset-2 enabled:focus:outline-2 enabled:focus:outline-darkslate-grey"
+              type="submit"
+              name="btnSubmit"
+            >
+              <span>Subscribe to monthly newsletter</span>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- success message -->
+      <section
+        id="success"
+        class="hidden w-full flex-col items-center justify-between bg-white px-7 pt-[50%] pb-8 md:max-w-md md:rounded-[40px] md:p-12 md:space-y-6 md:shadow-2xl md:shadow-bgColors"
+      >
+        <div
+          class="h-16 w-full bg-icon-success bg-contain bg-no-repeat mb-8 md:h-14"
+        ></div>
+        <h2 class="text-4xl md:text-5xl font-bold text-darkslate-grey">
+          Thanks for subscribing!
+        </h2>
+        <p class="mt-4">
+          A confirmation email has been sent to
+          <strong id="confirmation-email"> example@example.com </strong>
+          . Please open it and click the button inside to confirm your
+          subscription.
+        </p>
+        <a
+          href="/"
+          class="w-full rounded-lg bg-darkslate-grey text-white py-3 px-4 font-bold text-center hover:bg-gradient-to-t hover:from-pink hover:to-orange hover:shadow-lg hover:shadow-tomato/50 focus:outline focus:outline-offset-2 focus:outline-darkslate-grey"
+        >
+          Dismiss message
+        </a>
+      </section>
+    </main>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
