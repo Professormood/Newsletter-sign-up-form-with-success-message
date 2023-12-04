@@ -14,11 +14,11 @@ module.exports = {
         "darkslate-grey": "#242742",
         "charcoal-grey": "#36384e",
       },
-     backgroundImage: {
-        "hero-mobile": "url('/illustration-sign-up-mobile.svg')",
-        "hero-desktop": "url('/illustration-sign-up-desktop.svg')",
-        "icon-list": "url('/icon-list.svg')",
-        "icon-success": "url('/icon-success.svg')",
+      backgroundImage: {
+        "hero-mobile": "url('./public/illustration-sign-up-mobile.svg')",
+        "hero-desktop": "url('./public/illustration-sign-up-desktop.svg')",
+        "icon-list": "url('./public/icon-list.svg')",
+        "icon-success": "url('./public/icon-success.svg')",
       },
     },
   },
